@@ -14,7 +14,6 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
     password = Column(String(250), nullable=False)
-    favorites = Column(String(250), nullable=False)
     email = Column(String(250), nullable=False)
     favorite_characters = relationship('favoritepeople', back_populates='people')
     favorite_planets = relationship('favoritePlanet', back_populates='planet')
